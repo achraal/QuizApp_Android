@@ -55,16 +55,16 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                if(password.length()<6){
+                if(pwd.length()<6){
                     Toast.makeText(getApplicationContext(),"Password must be at least 6 characters",Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(!password.equals(pwdConfirm)){
+                if(!pwd.equals(pwdConfirm)){
                     Toast.makeText(getApplicationContext(),"Please enter correct password",Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                Toast.makeText(Register.this, "Register failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this, "Register done", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();

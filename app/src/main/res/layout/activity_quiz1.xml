@@ -30,7 +30,7 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rg"/>
+        android:id="@+id/rg">
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,8 +43,9 @@
         android:id="@+id/r2q1"
         android:layout_weight="1"
         android:text="Non"/>
+</RadioGroup>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:id="@+id/next"
@@ -53,7 +54,8 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="80dp"
-        android:src="@drawable/logoo"/>
+        android:src="@drawable/logoo"
+        android:layout_gravity="center"/>
 
 
 </LinearLayout>

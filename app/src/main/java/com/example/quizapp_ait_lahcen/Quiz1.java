@@ -17,8 +17,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Quiz1 extends AppCompatActivity {
-
-
     RadioButton rb;
     RadioGroup rg;
     Button next;
@@ -34,21 +32,24 @@ public class Quiz1 extends AppCompatActivity {
 //        r2q1 = findViewById(R.id.r2q1);
         next = findViewById(R.id.next);
 
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                rb = findViewById(rg.getCheckedRadioButtonId());
                 if(rg.getCheckedRadioButtonId() == -1 ){
                     Toast.makeText(getApplicationContext(), "Merci de choisir une réponse S.V.P !", Toast.LENGTH_SHORT).show();
+                    return;
                 } else {
-                    rb = findViewById(rg.getCheckedRadioButtonId());
-                }
+
+
                 if(rb.getText().toString().equals(reponse)){
                     score += 1;
                 }
+
                 Intent intent = new Intent(Quiz1.this, Quiz2.class);
+                startActivity(intent);
                 overridePendingTransition(R.drawable.exit,R.drawable.entry);
-                finish();
+                finish();}
             }
         });
     }
